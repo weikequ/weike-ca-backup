@@ -21,7 +21,8 @@ const theme = createTheme({
       fontSize: 96,
     },
     h3: {
-      fontFamily: 'Roboto'
+      fontFamily: 'Roboto',
+      fontSize: 14,
     }
   },
 });

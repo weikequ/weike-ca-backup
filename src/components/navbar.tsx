@@ -4,6 +4,7 @@ import { Home } from "../pages/home"
 import { About } from '../pages/about';
 import { Portfolio } from '../pages/portfolio';
 
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
@@ -52,7 +53,7 @@ export const NavBar: React.FC = () => {
   return (
     <div className="my-navbar">
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+        <Tabs textColor="primary" value={value} onChange={handleChange} aria-label="basic tabs example" centered>
           <Tab label="Home" {...a11yProps(0)} />
           <Tab label="About" {...a11yProps(1)} />
           <Tab label="Portfolio" {...a11yProps(2)} />
