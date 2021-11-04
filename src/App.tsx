@@ -1,28 +1,37 @@
 import React from 'react';
 
 import './App.css';
-import { Home } from "./pages/home"
-import { Route, Switch } from 'react-router-dom';
-import { About } from './pages/about';
-import { Portfolio } from './pages/portfolio';
-import { Experience } from './pages/experience';
 import { NavBar } from './components/navbar';
-import { Error } from './pages/error';
-import TemporaryDrawer from './components/temp-drawer';
+
+import { ThemeProvider } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
+import '@fontsource/roboto-mono';
+import '@fontsource/roboto';
+
+const theme = createTheme({
+  typography: {
+    h1: {
+      fontFamily: 'Roboto Mono',
+      fontWeight: 700,
+      fontSize: 144,
+    },
+    h2: {
+      fontFamily: 'Roboto Mono',
+      fontWeight: 100,
+      fontSize: 96,
+    },
+    h3: {
+      fontFamily: 'Roboto'
+    }
+  },
+});
 
 function App() {
-
   return (
     <div className="my-app">
-      <NavBar />
-      <TemporaryDrawer />
-      <Switch>
-        <Route path="/" component={Home} exact />
-        <Route path="/about" component={About} />
-        <Route path="/portfolio" component={Portfolio} />
-        <Route path="/experience" component={Experience} />
-        <Route component={Error} />
-      </Switch>
+      <ThemeProvider theme={theme}>
+        <NavBar />
+      </ThemeProvider>
     </div>
   );
 }
