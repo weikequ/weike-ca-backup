@@ -4,7 +4,6 @@ import { Home } from "../pages/home"
 import { About } from '../pages/about';
 import { Portfolio } from '../pages/portfolio';
 
-import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
